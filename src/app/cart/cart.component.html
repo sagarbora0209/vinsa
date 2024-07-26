@@ -1,0 +1,61 @@
+<p>cart works!</p>
+
+<!-- <div class="row container align-items-center">
+    <div class="card" *ngFor="let cart of carts" style="width:250px;margin: 5px;height:380px;margin-left:120px"> 
+        <img class="card-img-top" src="{{cart.image}}" alt="Card image cap">    
+        <div class="card-body">
+          <h3 class="card-title" style="text-align: center">{{cart.name}}</h3>
+          <div style="font-size:15px;" >
+            <p>FuelType: {{cart.fueltype}}</p>
+            <p>Description: {{cart.description}}</p>
+            <p>Rating: {{cart.rating}}</p>
+            <p>Price: {{cart.price | currency : 'INR'}}</p>
+        </div>
+          <a class="btn btn-primary btn-lg btn-block" routerLink="/cart" (click)="deleteProduct(cart.id)">Delete</a>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="empty" *ngIf="carts.length<1">
+      <ng-container >
+          <div class="container">
+              <div class="card" style="height: 550px">
+                  <h5 class="card-title">My Cart</h5>
+              </div>
+              <div class="center">
+                  <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+                  <h4>Your cart is empty!</h4>
+                  <h6>Add item to it now</h6>
+                  <button routerLink="/user-choice" class="btn btn-primary">Shop Now</button>
+              </div>
+          </div>
+      </ng-container>
+      </div>
+
+
+
+    <div class="empty" *ngIf="carts.length>0">
+      <div class="row container align-items-center">
+          <div class="card" *ngFor="let cart of carts" style="width:250px;margin: 5px;height:380px;margin-left:120px"> 
+              <img class="card-img-top" src="{{cart.image}}" alt="Card image cap">    
+              <div class="card-body">
+              <h3 class="card-title" style="text-align: center">{{cart.name}}</h3>
+                  <div style="font-size:15px;" >
+                      <p>CC: {{cart.cc}}</p>
+                      <p>Description: {{cart.description}}</p>
+                      <p>Rating: {{cart.rating}}</p>
+                      <p>Price: {{cart.price | currency : 'INR'}}</p>
+                  </div>
+              <a class="btn btn-primary btn-lg btn-block" routerLink="/cart" (click)="deleteProduct(cart.id)">Delete</a>
+              </div>
+        </div>
+      </div>
+      
+      <div class="card mt-5 container" style="height: 90px;margin-left:80px">
+          <h1 style="color: olive">Total Value: {{total | currency: 'INR'}}
+          <input type="submit" value="Make Payment" class="btn btn-primary btn-lg" routerLink="/payment" style="width:150px;height:40px;margin-left: 800px;"> </h1>
+      </div>
+      
+      </div>
+
+

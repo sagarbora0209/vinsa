@@ -1,0 +1,11 @@
+<!-- <p>update works!</p> -->
+
+<form #updateForm="ngForm" (ngSubmit)="submitUpdateForm(updateForm.value)" novalidate>
+    Name: <input type="text" ngModel name="name" [(ngModel)]="cars.name">
+    FuelType: <input type="text" ngModel name="cc" [(ngModel)]="cars.cc">
+    Price: <input type="text" ngModel name="price" [(ngModel)]="cars.price">
+    Description: <input type="text" ngModel name="description" [(ngModel)]="cars.description">
+    Rating: <input type="text" ngModel name="rating" [(ngModel)]="cars.rating">
+    ImagePath: <input type="text" ngModel name="image" [(ngModel)]="cars.image">
+    <input class="btn btn-primary btn-lg" type="submit" />
+    </form>

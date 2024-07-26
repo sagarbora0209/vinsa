@@ -1,0 +1,43 @@
+<!-- <p>payment works!</p> -->
+
+
+<div class="mainscreen">
+    <!-- <img src="https://image.freepik.com/free-vector/purple-background-with-neon-frame_52683-34124.jpg"  class="bgimg " alt="">  -->
+      <div class="card">
+        <div class="leftside">
+          <img
+            src="./assets/Images/vinsa-low-resolution-logo-white-on-transparent-background.png" style="width:-200px"
+            class="product"
+            alt="Shoes"
+          />
+        </div>
+        <div class="rightside">
+          <form #checkOutForm="ngForm" (ngSubmit)="checkOutSubmit(checkOutForm.value)" >
+            <h1>CheckOut</h1>
+            <h2>Payment Information</h2>
+            <p>Cardholder Name</p>
+            <input type="text" class="inputbox" ngModel name="name" #name="ngModel" required />
+            <p>Card Number</p>
+            <input type="number" class="inputbox" ngModel name="card_number" #card_number="ngModel" id="card_number" required minlength="16"/>
+
+            <p>Card Type</p>
+            <select class="inputbox" ngModel name="card_type" #card_type="ngModel" id="card_type" required>
+              <option value="">--Select a Card Type--</option>
+              <option value="Visa">Visa</option>
+              <option value="RuPay">RuPay</option>
+              <option value="MasterCard">MasterCard</option>
+            </select>
+<div class="expcvv">
+
+            <p class="expcvv_text">Expiry</p>
+            <input type="date" class="inputbox" ngModel name="exp_date" #exp_date="ngModel" id="exp_date" required />
+
+            <p class="expcvv_text2">CVV</p>
+            <input type="password" class="inputbox" ngModel name="cvv" #cvv="ngModel" id="cvv" required minlength="3"/>
+        </div>
+            <p></p>
+            <button type="submit" class="button" [disabled]=checkOutForm.invalid routerLink="/register1">CheckOut</button>
+          </form>
+        </div>
+      </div>
+    </div>

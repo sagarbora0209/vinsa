@@ -1,0 +1,93 @@
+<!-- <p>cars-list works!</p> -->
+
+<!-- <table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>FUEL_TYPE</th>
+            <th>PRICE</th>
+            <th>DESCRIPTION</th>
+            <th>RATING</th>
+            <th>IMAGE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let car of cars">
+        <td>{{car.id}}</td>
+        <td>{{car.name}}</td>
+        <td>{{car.fueltype}}</td>
+        <td>{{car.price}}</td>
+        <td>{{car.description}}</td>
+        <td>{{car.rating}}</td>
+        <td><img src="{{car.image}}"></td>
+    </tr>
+    </tbody>
+</table> -->
+<!------------------------------------------------------------------------------------------>
+
+<!-- <div class="row container" style="margin-left:200px">
+    <div class="card" *ngFor="let car of cars" style="width:320px;margin:20px;height:350px">
+        <div class="card-body">
+        <img class="card-img-top" src="{{car.image}}" style="width:250px; height:200px" alt="Card image cap">
+            <h5 class="card-title" style="text-align: center;"> {{car.name}}</h5>
+            <p class="card-text">FuelType: {{car.fueltype}}</p>
+            <p class="card-text">Price: {{car.price}}</p>
+            <p class="card-text">Description: {{car.description}}</p>
+            <p class="card-text">Rating: {{car.rating}}</p>
+
+        </div>
+    </div>
+</div> -->
+
+
+<!--------------------------------------------------------------------------------->
+<!-- 
+<div class="row container" style="margin-left:150px">
+    <div class="card" *ngFor="let car of cars" style="margin:15px;width:220px">
+    <div class="card-body">
+        <img class="card-img-top" src="{{car.image}}" style="width:200px; height:200px" alt="Card image cap">
+        <h5 class="card-title" style="text-align: center;"> {{car.name}}</h5>
+        <p class="card-text">CC: {{car.cc}}</p>
+        <p class="card-text">Price: {{car.price}}</p>
+        <p class="card-text">Description: {{car.description}}</p>
+        <p class="card-text">Rating: {{car.rating}}</p>
+      <a href="#" class="btn btn-primary">Add to cart</a>
+    </div>
+</div>
+  </div> -->
+
+  <!-- <div class="container-fluid" style="margin-left:200px">
+    <div class="card-deck" >
+        <div class="card" *ngFor="let car of cars"  style="margin:30px;margin-left:250px;width:250px" >
+            <img class="card-img-top" src="{{car.image}}" alt="Card image cap" style="width:250px;height:150px">
+            <div class="card-body" style="width:100px">
+                <h5 class="card-title" style=" background-color: deepskyblue;width:200px; text-align: center;" >{{car.name}}</h5>
+                <p class="card-text;font-family:Calibri" ><b>CC: </b>{{car.cc}}</p>
+                <p class="card-text"><b>Price:</b> {{car.price}}</p>
+                <p class="card-text"><b>Description:</b> {{car.description}}</p>
+                <p class="card-text"><b>Rating:</b> {{car.rating}}</p>
+                <input type="submit " class="btn btn-primary btn-lg" value="Add to Cart" style="width:200px">
+            </div>
+        </div>
+    </div>
+    </div> -->
+
+    <input type="submit" value="Go Back" class="btn btn-primary" routerLink="/user-choice" style="width:200px;height:50px;margin-top: 50px;margin-left:50px;font-size: 20px;">
+
+    
+<div class="row"  style="margin-left:100px;">
+    <div class="col-mb-3 card" *ngFor="let car of cars" style="width:300px;margin-left: 20px;">
+        <div class="card-body" style="width:100px;margin:10px">
+        <img class="card-img-top" src="{{car.image}}" alt="Card image cap" style="width:250px;height:150px">  
+        <h5 class="card-title" style=" background-color: deepskyblue;width:250px; text-align: center;">
+            {{car.name}}</h5>
+        <p class="card-text;font-family:Calibri"><b>CC: </b>{{car.cc}}</p>
+        <p class="card-text"><b>Price:</b> {{car.price}}</p>
+        <p class="card-text"><b>Description:</b> {{car.description}}</p>
+        <p class="card-text"><b>Rating:</b> {{car.rating}}</p>
+        <input type="submit " class="btn btn-primary btn-lg" (click)=goToCart(car) value="Add to Cart" style="width:250px">
+    
+    </div>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+
+      <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+                  <form #regForm="ngForm" (ngSubmit)="submitRegForm(regForm.value)" novalidate>
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+      
+                        <div class="form-outline">
+                          <input type="text" class="form-control form-control-lg" placeholder="Enter FirstName" ngModel name="firstName" #FirstName="ngModel" required/>
+                          <!-- <label class="form-label" for="firstName">First Name</label> -->
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4">
+      
+                        <div class="form-outline">
+                          <input type="text" class="form-control form-control-lg" placeholder="Enter LastName" ngModel name="lastName" #LastName="ngModel" required/>
+                          <!-- <label class="form-label" for="lastName">Last Name</label> -->
+                        </div>
+      
+                      </div>
+                    </div>
+      
+    
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <!-- <div class="form-outline"> -->
+                          <select class="select form-control-lg" ngModel name="country" #Country="ngModel" required placeholder="Select Country" style="width: 270px;">
+                            <option value="" disabled selected>--Select Country--</option>
+                            <option value={{country.alpha2Code}} *ngFor="let country of countriesList">{{country.name}}</option>
+                            <!-- <option value="2">India</option>
+                            <option value="3">USA</option>
+                            <option value="4">Japan</option> -->
+                          </select>
+                        <!-- </div> -->
+      
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="text" class="form-control form-control-lg" placeholder="Enter State" ngModel name="state" #State="ngModel" required/>
+                          <!-- <label class="form-label" for="lastName">Last Name</label> -->
+                        </div>
+      
+                      </div>
+                    </div>
+    
+    
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="email" class="form-control form-control-lg" placeholder="Enter Email" ngModel name="email" #Email="ngModel" required minlength="12" maxlength="50"/>
+                          <!-- <label class="form-label" for="emailAddress">Email</label> -->
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="password" class="form-control form-control-lg" placeholder="Enter Password" ngModel name="password" #Password="ngModel" required minlength="8" maxlength="20"/>
+                          <!-- <label class="form-label" for="phoneNumber">Phone Number</label> -->
+                        </div>
+      
+                      </div>
+                    </div>
+    
+    
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+      
+                        <p class="mb-2 pb-1">Gender: </p>
+      
+                        <div class="form-check form-check-inline">
+                          
+                          <input class="form-check-input" type="radio"
+                             checked name="gender" ngModel #Gender="ngModel" required value="Female"/>
+                          <label class="form-check-label" >Female</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio"
+                             name="gender" ngModel #Gender="ngModel" required value="Male"/>
+                          <label class="form-check-label">Male</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" id="otherGender"
+                             name="gender" ngModel #Gender="ngModel" required value="Others"/>
+                          <label class="form-check-label" >Other</label>
+                        </div>
+      
+                      </div>
+                    </div>
+    
+    
+                    <div class="mt-4 pt-2" style="align-items:center">
+                      <!-- <input class="btn btn-primary btn-lg btn-block" type="submit" [disabled]=regForm.invalid/> -->
+                      <input class="btn btn-primary btn-lg btn-block" type="submit" [disabled]=regForm.invalid/>
+                      <!-- <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]=regForm.invalid>Register</button> -->
+                      <h4 style="text-align:center">Already a Member?<a routerLink="/login">Login</a></h4>
+                    </div>
+                    
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+

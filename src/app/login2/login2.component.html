@@ -1,0 +1,57 @@
+<!-- <p>login2 works!</p> -->
+<app-header></app-header>
+
+<div class="item">
+  <img src="./assets/login.jpg" style="height:650px;margin-top: -20px;"
+  alt="pet" width="100%">
+</div>
+
+<div class="login-box">
+    <h2>VINSA</h2>
+    <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm.value)" novalidate>
+      <div class="user-box">
+        <input type="text" ngModel name="login" #loginId="ngModel" required
+        minlength="3" maxlength="30">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" ngModel name="password" #password="ngModel"
+        required minlength="3" maxlength="30">
+        <label>Password</label>
+      </div>
+     <button [disabled]=loginForm.invalid style="margin-left:100px;color:blue">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+     </button >
+      <br/><br/>
+      <h3 style="margin-left: 100px;color: white;">Not registered?</h3><a routerLink="/register1" style="margin-left:15px;margin-top: 5px;width:300px;text-align: center;color:blue">Create an account</a>
+    </form>
+  </div>
+
+
+  <!-- ---------------------------------- -->
+
+
+  <!-- <div class="login-box">
+    <h2>Login</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="">
+        <label>Password</label>
+      </div>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+    </form>
+  </div> -->

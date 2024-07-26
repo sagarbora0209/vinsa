@@ -1,0 +1,41 @@
+<!-- <p>add-bike works!</p> -->
+
+
+
+
+<div class="container">
+    <div class="card mt-5" style="align-items: center;">
+        <h1> Product Details </h1>
+    </div>
+    <div class="card mt-5" style="padding:20px">
+        <form #addProduct="ngForm" (ngSubmit)="submitProduct(addProduct.value)">
+            <div class="form-group">
+                <label for="name">Name: </label>
+                <input type="text" #name (ngModel)="name" name="name" id="name" class="form-control" placeholder="Enter Product Name" required>
+            </div>
+            <div class="form-group">
+                <label for="name">CC: </label>
+                <input type="text" #cc (ngModel)="cc" name="cc" id="cc" class="form-control" placeholder="Enter Product CC">
+            </div>
+            <div class="form-group">
+                <label for="name">Price: </label>
+                <input type="text" #price (ngModel)="price" name="price" id="price" class="form-control" placeholder="Enter product Price">
+            </div>
+            <div class="form-group">
+                <label for="name">Description: </label>
+                <input type="text" #description (ngModel)="description" name="description" id="description" class="form-control" placeholder="Enter product Description">
+            </div>
+            <div class="form-group">
+                <label for="name">Rating: </label>
+                <input type="text" #rating (ngModel)="rating" name="rating" id="rating" class="form-control" placeholder="Enter product Rating">
+            </div>
+            <div class="form-group">
+                <label for="name">ImagePath: </label>
+                <input type="text" #image (ngModel)="image" name="image" id="image" class="form-control" placeholder="Enter ImagePath">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary w-100" [disabled]=addProduct.invalid>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<!-- <p>users-list works!</p> -->
+<div class="container-fluid table-hover table-condensed table table-bordered" style="text-align: center;margin-top:40px">
+<table class="table table-stripped"style="text-align:center" style="color:rgb(64, 65, 73);font-size:150%;"  >
+    <thead>
+        <tr style="background-color: rgb(51, 126, 36);color:rgb(255, 136, 0);">
+            <th>ID</th>
+            <th>FIRST_NAME</th>
+            <th>LAST_NAME</th>
+            <th>COUNTRY</th>
+            <th>STATE</th>
+            <th>GENDER</th>
+            <th>EMAIL</th>
+        </tr>
+        
+    </thead>
+    <tbody style="background-color: lightgreen">
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.country}}</td>
+            <td>{{user.state}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
